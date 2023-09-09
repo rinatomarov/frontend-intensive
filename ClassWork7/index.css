@@ -1,0 +1,26 @@
+.red-text {
+    color: red;
+}
+#first-h1-tag {
+    color: green;
+}
+.my-custom-text {
+    color: #907128;
+    font-size: 24px ;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+
+    font-family: sans-serif;
+
+
+    /*text-decoration: line-through;
+    text-align: justify;
+    line-height: 40px;
+    hyphens: auto;
+    */
+
+    word-break: break-all;
+
+
+}

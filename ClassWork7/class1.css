@@ -1,0 +1,20 @@
+#h1-id{
+    color: green;
+}
+.h1-class{
+    color: red;
+}
+
+.text-class {
+    color: cornflowerblue;
+    font-size: 24px ;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 40px;
+    hyphens: auto;
+
+
+}
