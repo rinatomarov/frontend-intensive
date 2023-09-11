@@ -1,0 +1,34 @@
+#h1-blue{
+    color: blue;
+}
+.custom-text-uppercase {
+    color: #A05252FF;
+    font-size: 24px ;
+    font-weight: lighter;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    text-align: right;
+    /*text-decoration: line-through;
+    text-align: justify;
+    line-height: 40px;
+    hyphens: auto;
+    */
+}
+.custom-text-lowercase-with-line{
+    color: #A05252FF;
+    font-size: 24px ;
+    font-weight: lighter;
+    letter-spacing: 12px;
+    text-transform: lowercase;
+    text-align: center;
+    text-decoration: line-through;
+}
+.custom-text-lowercase-under-line{
+    color: #A05252FF;
+    font-size: 24px ;
+    font-weight: lighter;
+    letter-spacing: 12px;
+    text-transform: capitalize;
+    text-align: left;
+    text-decoration: underline;
+}
