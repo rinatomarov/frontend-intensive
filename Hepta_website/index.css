@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+
+.hero {
+    background: url("https://preview.colorlib.com/theme/hepta/images/hero_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero-header {
+    color: black;
+    padding: 60px 16px;
+}
+
+.hero-header a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.menu {
+    margin-left: auto;
+    margin-right: 0;
+    float: right;
+}
+
+.hero-info {
+    float: unset;
+    text-align: center;
+    color: white;
+    margin-top: 200px;
+}
+
+.hero-info h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.hero-info p {
+    font-size: 30px;
+    margin-top: 12px;
+    margin-bottom: 64px;
+}
+
+.hero-button {
+    margin: auto;
+    width: fit-content;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 16px 30px;
+}
+
+.mnt-image{
+
+}

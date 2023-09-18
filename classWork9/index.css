@@ -1,0 +1,27 @@
+.first-paragraph{
+   /*background: purple; */
+    background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg");
+    color: blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+}
+.second-paragraph{
+    background: #ccc;/*
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;*/
+    padding: 8px 4px 12px 16px; /* padding для того чтобы вставить одинаковые отступы по всем сторонам , по часовой идет отступы*/
+    margin-top: 40px ; /*элемент отталкивается на пикселей*/
+    /*margin-left: 20px;*/
+    border-top: 1px solid yellow;
+    border-left: 1px dashed;
+    border-radius: 16px;
+}
+.btn{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
