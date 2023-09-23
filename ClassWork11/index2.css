@@ -1,0 +1,20 @@
+/*hover - для наведения */
+/*active */
+.btn {
+    padding: 12px;
+}
+.border{
+    border-radius: 4px;
+    border: 2px solid green;
+}
+.btn:hover {
+    padding: 24px;
+    background: green;
+}
+.btn:active {
+    background: red;
+}
+
+.btn:focus{
+    color: purple;
+}
