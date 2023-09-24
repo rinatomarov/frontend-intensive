@@ -1,0 +1,113 @@
+.background-image {
+    background: url("https://uicookies.com/demo/theme/initial/images/bg_1.jpg");
+    background-size: cover; /*size of images - Изменяет размер фонового изображения, чтобы покрыть весь контейнер, даже если для этого придется растянуть изображение или немного обрезать один из краев*/
+    background-repeat: no-repeat; /*Свойство background-repeat определяет, будет ли и как фоновое изображение повторяться.=> no-repeat Фоновое изображение не повторяется. Изображение будет показано только один раз ❯*/
+    width: 100vw; /*Свойство width задает ширину элемента.*/
+    height: 100vh; /*Свойство height задает высоту элемента.*/
+
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: gray;
+    background: #cccccc;
+}
+
+.text-for-works{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: inline;
+    height: 5%;
+    position: fixed;
+    margin-top: 20px ;
+    padding: inherit;
+
+}
+
+.navbar-initial {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    line-height: inherit;
+    float: left;
+    padding-right: 100px;
+    padding-left: 20%;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 5px;
+
+}
+ul{
+    float: right;
+
+}
+li{
+    display: inline;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-top:30px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+.navbar-menu-names{
+    float: right;
+    list-style-type: none;
+    margin: 0 20px;
+    padding-right: 10%;
+}
+
+li a{
+    color: #ffffff;
+    text-decoration: none; /*чтобы убрать линию снизу у букв*/
+
+}
+.text-for-works h1{
+    margin-top: 290px;
+    font-weight: 400;
+    font-family: inherit;
+    font-size: 45px;
+    line-height: 2;
+    color: #ffffff;
+    text-align: center;
+    float: unset;
+
+
+}
+.text-for-works p{
+    font-weight: 400;
+    font-family: inherit;
+    font-size: 28px;
+    line-height: 2;
+    color: #7c7b7b;
+    text-align: center;
+    float: unset;
+}
+.text-for-works p a{
+    color: white;
+    text-decoration-color: #6dc234;
+}
+.btn-primary-div{
+    margin: auto;
+    background: #6dc234;
+    width: fit-content;
+    line-height: 2;
+    text-transform: uppercase;
+    border: 2px solid #6dc234;
+    border-radius: 4px;
+    text-align: center;
+    padding: 16px 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+.btn{
+    color: #ffffff;
+    text-decoration: none;
+
+}
