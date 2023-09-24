@@ -1,0 +1,12 @@
+a:nth-child(3n+1){
+    color: green;
+}
+a{
+    color: black;
+    font-size: 40px;
+}
+a:hover{
+    font-size: 50px;
+    transition: 0.3s linear all;
+    color: #1d31a0;
+}

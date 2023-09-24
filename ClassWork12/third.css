@@ -1,0 +1,82 @@
+/*p, a, span, div, p {*/
+/*    color: red;*/
+/*}*/
+
+/*p {*/
+/*    color: green;*/
+/*}*/
+
+/*.wrapper *{*/
+/*    color: red;*/
+/*}*/
+
+/*.span-container {*/
+/*    background: #464343;*/
+/*}*/
+
+/*span {*/
+/*    background: #464343;*/
+/*}*/
+
+/*.span-container > span {*/
+/*    background: green;*/
+/*}*/
+
+/*.list li:first-child {*/
+/*    color: blue;*/
+/*}*/
+
+/*.list li:last-child {*/
+/*    color: rebeccapurple;*/
+/*}*/
+
+/*.list li:nth-child(2) {*/
+/*    color: red;*/
+/*}*/
+
+/* odd|even */
+/*.list li:nth-child(odd) {*/
+/*    color: red;*/
+/*}*/
+
+/*.list li:nth-child(even) {*/
+/*    color: green;*/
+/*}*/
+
+/*.list li:nth-child(2n + 1) {*/
+/*    color: red;*/
+/*}*/
+
+.btn {
+    border: 2px solid #464343;
+    background: #cccccc;
+    padding: 12px 16px;
+    width: fit-content;
+    border-radius: 8px;
+
+    transition: 0.2s linear all;
+
+    /*transition-duration/: .2s;*/
+    /*transition-timing-function: linear;*/
+    /*transition-property: all;*/
+    /*transition-delay: 1s;*/
+}
+
+.btn:hover {
+    font-size: 20px;
+    border-radius: 40px;
+}
+
+a {
+    color: black;
+    transition: .3s linear all;
+}
+
+a:nth-child(3n+1) {
+    color: green;
+}
+
+a:hover {
+    font-size: 20px;
+    color: blue;
+}
