@@ -1,0 +1,54 @@
+.input-class *  {
+    margin-top: 40px;
+    margin-left: 40px;
+    color: blue;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 30px;
+}
+
+.red_text {
+    color: red;
+}
+
+/*.green_fon:hover, .blue_text:hover ,.red_text:hover {
+    background: greenyellow;
+    border: 4px solid blue;
+}*/
+.input-class :hover{
+    background: greenyellow;
+    border: 4px solid blue;
+}
+.input-class button {
+    background: #907128;
+    color: white;
+}
+
+.border * {
+    margin-left: 15px;
+    max-width: 15%;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 7px;
+}
+.border p:first-child{
+    background: blueviolet;
+}
+.border p:nth-child(2){
+    background: red;
+}
+.border p:nth-child(3){
+    background: green;
+}
+.border p:last-child{
+    background: black;
+}
+
+.border *:hover{
+    max-width: 100%;
+    transition: 0.2s linear all;
+
+}
