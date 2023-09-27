@@ -1,0 +1,40 @@
+/*
+a[href*="google"]{
+    color: green;
+}
+
+a[href$="com"]{
+    color: gray;
+}
+a[href^="https"]{
+    color: green;
+}
+input:disabled{
+    background: #907128;
+}
+input:enabled{
+    background: #6dc234;
+}*/
+
+a[href="https://google.kz"]{
+    color: green;
+}
+
+a[href*="ex"]{
+    color: red;
+}
+a[href$="uz"]{
+    color: gray;
+}
+a[href^="https"]{
+    background: purple;
+}
+input:disabled + label{
+    color: gray;
+}
+input:enabled + label {
+    color: blue;
+}
+input:checked + label {
+    color: green;
+}
