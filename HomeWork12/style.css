@@ -1,0 +1,12 @@
+input:disabled {
+    color: blueviolet;
+}
+input{
+    color: red;
+}
+input:checked + label {
+    color: green;
+}
+input[type='number']{
+    background: #ccc;
+}
