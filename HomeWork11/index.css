@@ -1,13 +1,3 @@
-.input-class *  {
-    margin-top: 40px;
-    margin-left: 40px;
-    color: blue;
-    width: fit-content;
-    padding: 8px;
-    border-radius: 8px;
-    font-size: 30px;
-}
-
 .red_text {
     color: red;
 }
