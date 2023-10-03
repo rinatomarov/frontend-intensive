@@ -1,0 +1,52 @@
+h2::first-letter {
+    color: red;
+    text-transform: uppercase;
+    
+}
+
+p::first-line {
+    /*margin-left: 8px;*/
+    color: green;
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: fit-content;
+    background: #A99D95;
+}
+
+.block::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: green;
+    color: red;
+    font-size: 20px;
+}
+
+.block::before {
+    content: "<=";
+    min-width: 100px;
+    height: 100px;
+    background-size: cover;
+    background: url("https://m.media-amazon.com/images/M/MV5BYWU4MDMxZDEtZmYzMy00ZWRlLTliYmUtZjk1NzliN2M5NjRiXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg");
+    color: red;
+    font-size: 20px;
+}
+
+button, input {
+    color:blue;
+    border: 2px solid red;
+    border-radius: 2px;
+    /*outline-color: black;*/
+    /*outline-width: 1px;*/
+    /*outline-style: dashed;*/
+    /*outline: none;*/
+}
+
+input::placeholder {
+    /*color: blue;*/
+    /*font-size: 40px;*/
+}

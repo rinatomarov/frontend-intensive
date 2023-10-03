@@ -1,0 +1,67 @@
+.random {
+    width: 200px;
+    height: 200px;
+    background: url("https://www.incredible-web.com/media/1087/ajax_loaders.png");
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*transform: rotate(360deg);*/
+    /*transform: scale(.7);*/
+    /*transform: translate(50%, 50%);*/
+
+
+    /*transform: skew(30deg);*/
+    /*transform: skewY(50deg);*/
+    /*animation-name: colorchanger;*/
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorchanger {
+    0% {
+        /*width: 200px;*/
+        /*height: 200px;*/
+        /*background: red;*/
+        /*margin-top: 0;*/
+    }
+
+    50% {
+        /*transform: scale(1.5);*/
+        /*width: 300px;*/
+        /*height: 300px;*/
+        /*background: blue;*/
+        /*margin-top: 15px;*/
+    }
+
+    100% {
+        /*width: 200px;*/
+        /*height: 200px;*/
+        /*background: purple;*/
+        /*margin-top: 32px;*/
+    }
+}
+
+.box {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background: url("https://www.incredible-web.com/media/1087/ajax_loaders.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: circle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circle {
+    /*50% {*/
+    /*    transform: rotate(180deg);*/
+    /*}*/
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

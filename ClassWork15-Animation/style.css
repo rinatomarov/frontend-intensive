@@ -1,0 +1,40 @@
+.square {
+    width: 250px;
+    height: 150px;
+    background: #464343;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 6px;
+    border: 1px solid #464343 ;
+    border-top: 5px solid sandybrown;
+    animation-name: move-it;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes move-it {
+    0% {
+
+        transform: rotate(5deg);
+    }
+    20% {
+
+        transform: rotate(10deg);
+    }
+    40% {
+
+        transform: rotate(15deg);
+    }
+    60% {
+        transform: rotate(-10deg);
+
+    }
+    80% {
+
+        transform: rotate(-5deg);
+    }
+    100% {
+
+        transform: rotate(0deg);
+    }
+}

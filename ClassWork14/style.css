@@ -1,0 +1,41 @@
+h2::first-letter{
+    color: red;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+p::first-line{
+    color: green;
+    font-family: sans-serif;
+}
+
+.container{
+    border: 1px solid #cccccc;
+    width: fit-content;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #464343;
+    font-size: 30px;
+}
+
+.block::before{
+    content: "😍";
+    background: plum;
+}
+.block::after{
+    content: "😍";
+    background:plum;
+    opacity: 50%;
+}
+input{
+    font-size: 20px;
+    border: 3px solid red ;
+    border-radius: 3px ;
+    outline-color: black;
+    outline-width: 3px;
+    outline-style: dashed;
+}
+input::placeholder{
+    color: blue;
+    font-size: 20px;
+}
