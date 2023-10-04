@@ -1,0 +1,31 @@
+body{
+    background: url("https://media.istockphoto.com/id/1465352994/photo/abstract-digital-background.webp?b=1&s=170667a&w=0&k=20&c=fbQF3xro_gX0A06HcEYRjERIgQA1lKe6q_X-_xEfRus=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 ,p ,h3 {
+    color: white;
+}
+h2::first-letter {
+    color: red;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+p::first-line{
+    font-size: 20px;
+    text-decoration: underline;
+}
+img{
+    width: 210px;
+    height: 175px;
+}
+
+.div-img::before{
+    content: "👎";
+    font-size: 45px;
+
+}
+.div-img::after{
+    content: "👍";
+    font-size: 45px;
+}
