@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.text-container {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 12px;
+    /*box-shadow: горизонтальный отступ тени, вертикальный отступ тени, степень размытости тени, радиус тени, цвет тени*/
+    box-shadow: .5rem 1.2em 60px -0.5em rgb(234, 0, 5);
+    transition: 0.3s linear all;
+}
+
+.text-container:hover {
+    box-shadow: .5rem 1.2em 60px 0 rgb(234, 0, 5);
+    transform: scale(1.1);
+}
+
+.text-container::after {
+    content: attr(test);
+}
+
+.header {
+    height: 70px;
+    background: #34a1a1;
+}
+
+.hero {
+    /*height: calc(100vh - 70px);*/
+    height: min(50vh, 100px);
+    width: 100vw;
+    background: #315d5d;
+}

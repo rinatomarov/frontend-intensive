@@ -1,0 +1,28 @@
+
+.box-1 {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 12px;
+    margin-top: 50px;
+    /*box-shadow: горизонтальный отступ тени, вертикальный отступ тени, степень размытости тени, радиус тени, цвет тени*/
+    box-shadow: 1rem -1.2em 20px 0 rgb(234, 0, 5);
+    transition: 0.3s linear all;
+}
+
+.box-1::before {
+    content: attr(test);
+}
+
+.box-2 {
+    border: 1px solid black;
+    width: min(80vw, 500px);
+    padding: 12px;
+}
+
+.hero {
+    /*height: calc(100vh - 70px);*/
+    height: max(50vh, 200px);
+    /*height: min(50vh, 200px);*/
+    width: 100vw;
+    background: #315d5d;
+}
