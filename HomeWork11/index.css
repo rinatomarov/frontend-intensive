@@ -1,0 +1,30 @@
+.red_text {
+    color: red;
+}
+.border * {
+    margin-left: 15px;
+    max-width: 15%;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 15px 15px;
+    color: white;
+    border-radius: 7px;
+}
+.border p:first-child{
+    background: blueviolet;
+}
+.border p:nth-child(2){
+    background: red;
+}
+.border p:nth-child(3){
+    background: green;
+}
+.border p:last-child{
+    background: black;
+}
+
+.border *:hover{
+    max-width: 100%;
+    transition: 0.2s linear all;
+
+}
