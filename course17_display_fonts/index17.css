@@ -1,0 +1,29 @@
+div  {
+    background: deeppink ;
+    width: 100vw;
+    height: 100vh;
+    padding: 13px;
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+}
+span {
+    background: lawngreen;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-family: 'EB Garamond', serif;;
+}
+.first-line-span{
+    display: inline-block;
+    height: 40px;
+
+}
+.second-line-span{
+    display: block;
+    margin-bottom: 20px;
+}
+.not-visible-span {
+    display: none;
+}
