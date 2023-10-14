@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+.red {
+    background: red;
+    min-width: 90px;
+    height: 90px;
+    width: fit-content;
+}
+
+.green {
+    background: green;
+    min-width: 90px;
+    height: 90px;
+    width: fit-content;
+}
+
+.blue {
+    background: blue;
+    min-width: 90px;
+    height: 90px;
+    width: fit-content;
+}
+.purple {
+    background: purple;
+    min-width: 90px;
+    height: 90px;
+    width: fit-content;
+}
+
+.container1 {
+    width: 33vw;
+    height: 200vh;
+    background: aquamarine;
+    display: flex;
+}
+.container1 + .container_in1{
+
+}
+.container2 {
+    width: 33vw;
+    height: 200vh;
+    background: yellow;
+}
+.container3 {
+    width: 34vw;
+    height: 200vh;
+    background: blueviolet;
+}

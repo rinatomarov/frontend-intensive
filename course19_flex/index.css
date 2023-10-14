@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+.container{
+    margin-top: 10px;
+    background: midnightblue;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px;
+    gap: 17px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+.container li {
+    list-style-type: none;
+
+}
+.card {
+    background: white;
+    width: 10vw;
+    height: 20vh;
+    border: 1px solid aquamarine;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.info {
+
+}

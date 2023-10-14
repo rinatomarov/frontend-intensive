@@ -1,0 +1,92 @@
+body {
+    /*display: flex;*/
+}
+
+.container {
+    width: 800px;
+    height: 100vh;
+    background: aquamarine;
+    display: inline-flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    /*justify-content: space-evenly;*/
+    /*align-items: center;*/
+    /*flex-flow: direction wrap */
+    /*flex-flow: column wrap;*/
+    align-content: center;
+    gap: 36px 8px;
+}
+
+
+.container div {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background: red;
+    flex-grow: 2;
+    /*align-self: flex-start;*/
+    /*order: 3;*/
+}
+.green {
+    background: green;
+    flex-grow: 7;
+    /*flex-shrink: 0;*/
+    /*order: 3;*/
+}
+.blue {
+    background: blue;
+}
+.purple {
+    background: purple;
+    /*order: 2;*/
+}
+
+
+
+
+/*.form {*/
+/*    background: antiquewhite;*/
+/*    padding: 16px;*/
+
+/*    width: 300px;*/
+/*    height: 200px;*/
+/*    !*width: fit-content;*!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    gap: 16px;*/
+/*}*/
+
+
+/*.form * {*/
+/*    width: 200px;*/
+/*}*/
+
+.card {
+        background: antiquewhite;
+        width: 300px;
+        height: 200px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+/*.info * {*/
+/*    min-width: 150px;*/
+/*}*/
+
+.info {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: flex-end;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: flex-end;*/
+    /*margin-left: auto;*/
+    /*width: fit-content;*/
+    /*text-align: right;*/
+}
