@@ -1,0 +1,25 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 50px 200px;
+    gap: 10px 30px;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    /*justify-items: center;*/
+    /*align-items: center;*/
+}
+
+
+.container div {
+    /*
+    border: 1px solid black;
+    */
+    min-width: 100px;
+}
+
+.item-1 {
+    grid-row-start: 1;
+    grid-row-end:3;
+
+}
