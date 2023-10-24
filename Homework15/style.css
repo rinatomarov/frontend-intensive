@@ -1,0 +1,21 @@
+:root {
+    --bg-primary-hero: darkblue;
+}
+body {
+    margin:0;
+}
+.header {
+    padding-left:30px;
+    height: 5vh;
+}
+.hero {
+    background: var(--bg-primary-hero);
+    height: 95vh;
+    min-width: 100%;
+}
+.forms {
+    min-height: 150px;
+    max-width: 300px;
+    background: #eeeeee;
+    border-radius: 5px ;
+}
