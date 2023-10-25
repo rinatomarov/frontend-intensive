@@ -1,21 +1,41 @@
 :root {
-    --bg-primary-hero: darkblue;
+    --bg-primary-hero: #06012f;
 }
 body {
     margin:0;
 }
 .header {
     padding-left:30px;
-    height: 5vh;
+    height: 6vh;
+    font-weight: bold;
 }
 .hero {
     background: var(--bg-primary-hero);
-    height: 95vh;
+    height: calc(100vh - 6vh);
     min-width: 100%;
+    padding-top: 100px;
 }
 .forms {
-    min-height: 150px;
-    max-width: 300px;
+    min-height: 200px;
+    width: 300px;
     background: #eeeeee;
     border-radius: 5px ;
+    margin:auto;
+    padding: 20px;
+}
+.forms input {
+    font-size: 18px;
+    padding: 8px;
+    margin-bottom: 25px;
+    box-shadow: 4px 4px 8px 0 rgb(191, 175, 175);
+    width: 90%;
+}
+.forms button {
+    background: #208dd2;
+    padding: 12px;
+    border: none;
+    border-radius: 5px ;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
 }

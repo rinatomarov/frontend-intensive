@@ -18,6 +18,7 @@ span {
 .first-line-span{
     display: inline-block;
     height: 40px;
+    background: midnightblue;
 
 }
 .second-line-span{
