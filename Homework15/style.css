@@ -6,12 +6,12 @@ body {
 }
 .header {
     padding-left:30px;
-    height: 6vh;
+    height: 60px;
     font-weight: bold;
 }
 .hero {
     background: var(--bg-primary-hero);
-    height: calc(100vh - 6vh);
+    height: calc(100vh - 60px);
     min-width: 100%;
     padding-top: 100px;
 }
