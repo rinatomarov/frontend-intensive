@@ -1,0 +1,29 @@
+body {
+    margin:0;
+
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    margin-top: 0;
+    background: white;
+    padding: 20px;
+
+}
+.backgr {
+    background-image: url("https://content.knightfrank.com/blog/2019/11/8b19cf73-d410-4b9b-86ea-f2fd100ef1a3/smart-buildings-976.jpg");
+    max-width: 100vw;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text {
+    font-weight: bold;
+    font-size: 44px;
+    color: white;
+    position: absolute;
+    right: 160px;
+    bottom: 0;
+    width: 260px;
+}
