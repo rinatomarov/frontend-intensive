@@ -8,4 +8,4 @@ confirm('Are you sure?')*/
 
 // alert(prompt("your name ???"))
 
-console.log(hello)
+// console.log(hello)
