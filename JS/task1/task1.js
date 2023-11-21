@@ -89,5 +89,6 @@ const freeShipping ={
     bking:true,
     tagam:false
 }
+console.log(freeShipping.dermene)
 // 5
 console.log(dataHouse.dermene.name)
