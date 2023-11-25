@@ -41,15 +41,25 @@ const age = 17
 //     alert("Молодой")
 // }
 
-const a = 4
-const b = 8
-if (a+b>10){
-    alert("Больше чем 10")
-}else if (a-b>=4){
-    alert("а намного больше")
-}
-if(b%a===0){
-    alert("а делится на b")
-}
+// const a = 4
+// const b = 8
+// if (a+b>10){
+//     alert("Больше чем 10")
+// }else if (a-b>=4){
+//     alert("а намного больше")
+// }
+// if(b%a===0){
+//     alert("а делится на b")
+// }
 
 
+// const , let - локальные переменные
+// var - глобальный
+
+// if (age>5){
+//     const aa = 'a'
+//     let aa1 =  'as'
+//     var ds = '2323'
+//
+// }
+// console.log(ds)
