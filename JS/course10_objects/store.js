@@ -3,7 +3,7 @@ const store = {
     name: "Rancho",
     typeOfProduct: "Cheese Products",
     opening_times: "09:00 - 18:00",
-    contact:'87075512787',
+    contact:'8888888888',
     termOfUse: '3 дня от открытия целлофана'
 }
 // 2
