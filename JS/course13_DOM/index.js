@@ -9,14 +9,28 @@ arrays = [{image:'https://media.2x2tv.ru/content/images/2022/04/----------------
     {image:'https://pm1.aminoapps.com/6764/9a05868b48d6eed98c4a2a9fe30b4df872929c4cv2_00.jpg'}
 ]
 
+let counter = 0
 button2.addEventListener('click', function (event){
-    const images = document.querySelector('img')
-    images.setAttribute('src', arrays[0].image)
+    if (counter < arrays.length) {
+        const images = document.querySelector('img')
+        images.setAttribute('src', arrays[counter].image)
+        counter++
+    } else {
+        counter = 0
+    }
+
 })
 
+
 button.addEventListener('click', function (event){
-    const images = document.querySelector('img')
-    images.setAttribute('src',arrays[3].image)
+    if (counter>0){
+        const images = document.querySelector('img')
+        images.setAttribute('src',arrays[counter].image)
+        counter--
+    }else{
+        counter = arrays.length-1
+    }
+
 })
 // inner HtmL -> arrays[0] -> addEventListener ->
 
