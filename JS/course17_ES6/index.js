@@ -15,6 +15,10 @@ for (let key in car){
 //     console.log(value, ":", car[key])
 // }
 
+for(let key of Object.keys(car)){
+    console.log(key, car[key])
+}
+
 let count = 1
 for(let prices of complectation_prices_1000) {
     // console.log(count ,"комплектация стоит: " , prices)
@@ -33,9 +37,9 @@ const {name,model ,complectation,price_tg,garanty_km } = car
 
 
 // 2
-let SetCollection = new Set();
-for(let n =0; n<5;n++){
-    let drink = prompt("Введите имя напитков")
-    SetCollection.add(drink)
-}
-console.log(SetCollection);
+// let SetCollection = new Set();
+// for(let n =0; n<5;n++){
+//     let drink = prompt("Введите имя напитков")
+//     SetCollection.add(drink)
+// }
+// console.log(SetCollection);
