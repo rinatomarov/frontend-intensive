@@ -1,7 +1,7 @@
 const login = document.querySelector('input[name="login"]')
-console.log(login)
+// console.log(login)
 const psword = document.querySelector('input[name="psword"]')
-console.log(psword)
+// console.log(psword)
 const button = document.querySelector('button')
 // console.log(button)
 
@@ -12,7 +12,7 @@ button.addEventListener('click', function (event) {
             const loginPassword = 'admin'
             login1 = login.value
             pass1 = psword.value
-            console.log(login1)
+            // console.log(login1)
             let toast = 'вы успешно зашли'
             if (login1 === loginPassword && pass1 === loginPassword) {
                 resolve(toast)
@@ -30,11 +30,12 @@ button.addEventListener('click', function (event) {
     })
 
     promise.catch((toast) => {
-        console.log('error')
+        // console.log('error')
+        alert("Ошибка")
     })
 
     promise.finally(() => {
-        console.log('ura')
+        psword.value = ''
     })
 })
 //
