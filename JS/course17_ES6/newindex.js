@@ -66,3 +66,5 @@ const surname = student.surname
 console.log(name)
 console.log(grades)
 console.log(surname)
+
+const name = "rincho"
