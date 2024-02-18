@@ -15,6 +15,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 // 2
 const parent = document.querySelector('.parent')
 const btn = document.querySelector('button')
+let idPost = 1
+// console.log('начало', idPost)
 
 btn.addEventListener('click' , () => {
     const post = document.createElement('div')
@@ -26,7 +28,7 @@ btn.addEventListener('click' , () => {
 
     let textPost = prompt('Прошу ввести текст поста')
     const textP = document.createElement('p')
-    textP.innerText =textPost
+    textP.innerText = textPost
 
     post.appendChild(name)
     post.appendChild(textP)
@@ -37,6 +39,7 @@ btn.addEventListener('click' , () => {
             title: namePost,
             body: textPost,
             userId: 1,
+            idPost: idPost
         }),headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
@@ -44,19 +47,20 @@ btn.addEventListener('click' , () => {
         return response.json()
     }).then(json => console.log(json)).then(parent.appendChild(post))
 
-
-
     const btnDelete = document.createElement('button')
     btnDelete.innerText = 'удалить'
     post.appendChild(btnDelete)
+    btnDelete.classList.add('btnDelete')
 
     const btnUpdate = document.createElement('button')
     btnUpdate.innerText = 'редактировать'
     post.appendChild(btnUpdate)
+    btnUpdate.classList.add('btnUpdate')
+
 
     btnDelete.addEventListener('click' , () => {
         // alert("delete")
-        fetch('https://jsonplaceholder.typicode.com/posts', {
+        fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`, {
             method: 'DELETE'
         })
             .then(response => {
@@ -67,15 +71,23 @@ btn.addEventListener('click' , () => {
         post.remove(post)
     })
 
+
     btnUpdate.addEventListener('click' , () => {
+        let namePost = prompt('Прошу ввести измененный тему поста')
+        const name = document.querySelector('h3')
+
+        let textPost = prompt('Прошу ввести измененный текст поста')
+        const textP = document.querySelector('p')
+
         // alert("update")
-        fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`, {
             method: 'PUT',
             // сделать так чтобы  он менял
             body: JSON.stringify({
-                title: prompt("Прошу ввести тему "),
-                body: prompt("Прошу ввести текст поста "),
+                title: namePost,
+                body: textPost,
                 userId: 1,
+                idPost: idPost
             }),headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
@@ -83,6 +95,12 @@ btn.addEventListener('click' , () => {
             return response.json()
         }).then(json => console.log(json))
 
-    })
-})
+        name.innerText = namePost
+        textP.innerText = textPost
 
+    })
+    return idPost++
+})
+//
+// const btnDel = document.querySelector('.btnDelete')
+// const btnUpd = document.querySelector('.btnUpdate')
