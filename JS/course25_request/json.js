@@ -74,12 +74,13 @@ btn.addEventListener('click' , () => {
 
     btnUpdate.addEventListener('click' , () => {
         let namePost = prompt('Прошу ввести измененный тему поста')
-        const name = document.querySelector('h3')
+        const name = post.querySelector('h3')
 
         let textPost = prompt('Прошу ввести измененный текст поста')
-        const textP = document.querySelector('p')
+        const textP = post.querySelector('p')
 
         // alert("update")
+        // сделать дополнительный атрибут и по нему апдейтить
         fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`, {
             method: 'PUT',
             // сделать так чтобы  он менял
