@@ -1,15 +1,40 @@
 body{
     background: lightgoldenrodyellow;
 }
-
+*{
+    font-family: 'Work Sans', sans-serif;
+}
 .form{
     background: #1d31a0;
     display: flex;
-    /*flex-wrap: wrap;*/
-    align-items: center;
     justify-content: center;
-    margin: 40px ;
+    margin: 44px auto;
+    border-radius: 12px;
+    max-width: 1000px;
+    padding: 20px 16px;
+    flex-wrap: wrap;
+    color: white;
+}
+.input-create{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    height: 40px;
+    padding: 8px 8px;
+    margin-bottom: 20px;
+}
+.input-name{
+    width: 100%;
+    border: 1px  solid white;
     border-radius: 8px;
-    /*width: 100%;*/
-    /*max-width: 1000px;*/
+    font-size: 16px;
+    outline: none;
+    padding: 16px;
+}
+.create-name{
+    border-radius: 8px;
+    /*border: none;*/
+    width: 100%;
+    max-width: 120px;
+    outline: none;
 }
