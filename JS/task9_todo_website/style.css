@@ -38,3 +38,54 @@ body{
     max-width: 120px;
     outline: none;
 }
+
+.todo-parent{
+    display: flex;
+    justify-content: space-around;
+}
+.todo-column{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 240px;
+    align-items: center;
+}
+.todo-column-active{
+    background: #6dc234;
+}
+.todo-column-on-hold{
+    background: gold;
+}
+.todo-column-finished{
+    background: seagreen;
+}
+.todo-column-canceled{
+    background: #d3438b;
+}
+.todo-column h3{
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.todo-items{
+    width: 100%;
+}
+
+.todo-item{
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: Amiri, serif;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+
+}
+.trash:hover{
+    background: white;
+    border: none;
+}
