@@ -5,13 +5,13 @@ const canceledToDo = document.querySelector('.todo-column-canceled')
 let idTask = 101
 // console.log(todoItems)
 const status =['active','hold','finished','canceled']
-function addElements(statusTask,title){
+function addElements(statusTask,title,id){
     const todoItemsActive =  activeToDo.querySelector('.todo-items')
     const todoItemsHold =  onHoldToDo.querySelector('.todo-items')
     const todoItemsFinished =  finishedToDo.querySelector('.todo-items')
     const todoItemsCanceled =  canceledToDo.querySelector('.todo-items')
 
-    // Создание елементов
+    // Создание элементов
     const todoItemCreate = document.createElement('div')
     todoItemCreate.classList.add('todo-item')
     const taskName = document.createElement('span')
@@ -19,6 +19,10 @@ function addElements(statusTask,title){
     const buttonTrash = document.createElement('button')
     buttonTrash.classList.add('trash')
     buttonTrash.innerHTML = '<img src="trash.svg">'
+    //1 varik buttonTrash.addevent
+    // buttonTrash.dataset.id = id
+
+    // console.log(id)
     todoItemCreate.append(taskName)
     todoItemCreate.append(buttonTrash)
 
@@ -30,9 +34,16 @@ function addElements(statusTask,title){
     } else if(status[2].includes(statusTask)){
         todoItemsFinished.append(todoItemCreate)
     } else todoItemsCanceled.append(todoItemCreate)
-    // todoItemsActive.append(todoItemCreate)
 
     // console.log(todoItems)
+
+    buttonTrash.addEventListener('click', async () =>{
+        await axios.delete(`http://localhost:3000/todos/${id}`)
+            .then(response => {
+                console.log(`Deleted post with ID ${id}`);
+            })
+        todoItemCreate.remove(todoItemCreate)
+    })
 
     idTask++
     return idTask
@@ -46,7 +57,7 @@ async function getToDoS(){
         let statusTask = response.data[id].status
         let title = response.data[id].title
         // console.log(statusTask, title)
-        addElements(statusTask,title)
+        addElements(statusTask,title,response.data[id].id)
         // console.log(status[0])
     }
 }
@@ -65,11 +76,12 @@ buttonCreateTask.addEventListener('click', async () => {
 
     async function postRequest(status,dataText){
         await axios.post('http://localhost:3000/todos',{
-            id:idTask,
+            id: `${idTask}`,
+            // idTask,
             title:dataText,
             status:status
         })
-        addElements(status,dataText)
+        addElements(status,dataText,idTask)
     }
 
     if (radioDataActive){
@@ -87,4 +99,3 @@ buttonCreateTask.addEventListener('click', async () => {
     // alert(dataInput)
 })
 
-const buttonDeleteTask = document.querySelector('.trash')
