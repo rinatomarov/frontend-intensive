@@ -2,7 +2,7 @@ const activeToDo = document.querySelector('.todo-column-active')
 const onHoldToDo = document.querySelector('.todo-column-on-hold')
 const finishedToDo = document.querySelector('.todo-column-finished')
 const canceledToDo = document.querySelector('.todo-column-canceled')
-
+let idTask = 101
 // console.log(todoItems)
 const status =['active','hold','finished','canceled']
 function addElements(statusTask,title){
@@ -33,6 +33,9 @@ function addElements(statusTask,title){
     // todoItemsActive.append(todoItemCreate)
 
     // console.log(todoItems)
+
+    idTask++
+    return idTask
 }
 
 async function getToDoS(){
@@ -51,7 +54,6 @@ getToDoS()
 
 
 const buttonCreateTask = document.querySelector('.create-name')
-let idTask = 101
 
 buttonCreateTask.addEventListener('click', async () => {
     let dataInput = document.querySelector('.input-name').value
@@ -68,8 +70,6 @@ buttonCreateTask.addEventListener('click', async () => {
             status:status
         })
         addElements(status,dataText)
-        idTask++
-        return idTask
     }
 
     if (radioDataActive){
@@ -86,3 +86,5 @@ buttonCreateTask.addEventListener('click', async () => {
     // return idTask
     // alert(dataInput)
 })
+
+const buttonDeleteTask = document.querySelector('.trash')
