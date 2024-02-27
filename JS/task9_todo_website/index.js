@@ -49,17 +49,30 @@ function addElements(statusTask,title,id){
     return idTask
 }
 
+
 async function getToDoS(){
-    const response = await axios.get('http://localhost:3000/todos')
-    console.log(response.data)
-    for (let id =0;id < response.data.length;id++){
-        // console.log(response.data[id])
-        let statusTask = response.data[id].status
-        let title = response.data[id].title
-        // console.log(statusTask, title)
-        addElements(statusTask,title,response.data[id].id)
-        // console.log(status[0])
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'block';
+    try {
+        const response = await axios.get('http://localhost:3000/todos')
+        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+        console.log(response.data)
+        for (let id =0;id < response.data.length;id++){
+            // console.log(response.data[id])
+            let statusTask = response.data[id].status
+            let title = response.data[id].title
+            // console.log(statusTask, title)
+            addElements(statusTask,title,response.data[id].id)
+            await sleep(50)
+            // console.log(status[0])
+        }
+    }catch (error){
+        console.log('Error:', error)
+    }finally {
+        spinner.style.display = 'none';
     }
+
+
 }
 getToDoS()
 

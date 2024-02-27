@@ -1,10 +1,12 @@
-body{
+body {
     background: lightgoldenrodyellow;
 }
-*{
+
+* {
     font-family: 'Work Sans', sans-serif;
 }
-.form{
+
+.form {
     background: #1d31a0;
     display: flex;
     justify-content: center;
@@ -15,7 +17,8 @@ body{
     flex-wrap: wrap;
     color: white;
 }
-.input-create{
+
+.input-create {
     display: flex;
     gap: 16px;
     width: 100%;
@@ -23,15 +26,17 @@ body{
     padding: 8px 8px;
     margin-bottom: 20px;
 }
-.input-name{
+
+.input-name {
     width: 100%;
-    border: 1px  solid white;
+    border: 1px solid white;
     border-radius: 8px;
     font-size: 16px;
     outline: none;
     padding: 16px;
 }
-.create-name{
+
+.create-name {
     border-radius: 8px;
     /*border: none;*/
     width: 100%;
@@ -39,11 +44,12 @@ body{
     outline: none;
 }
 
-.todo-parent{
+.todo-parent {
     display: flex;
     justify-content: space-around;
 }
-.todo-column{
+
+.todo-column {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -51,29 +57,35 @@ body{
     min-width: 240px;
     align-items: center;
 }
-.todo-column-active{
+
+.todo-column-active {
     background: #6dc234;
 }
-.todo-column-on-hold{
+
+.todo-column-on-hold {
     background: gold;
 }
-.todo-column-finished{
+
+.todo-column-finished {
     background: seagreen;
 }
-.todo-column-canceled{
+
+.todo-column-canceled {
     background: #d3438b;
 }
-.todo-column h3{
-    color:white;
+
+.todo-column h3 {
+    color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
-.todo-items{
+
+.todo-items {
     width: 100%;
 }
 
-.todo-item{
+.todo-item {
     background: white;
     padding: 12px;
     border-radius: 8px;
@@ -85,7 +97,29 @@ body{
     max-width: 300px;
 
 }
-.trash:hover{
+
+.trash:hover {
     background: white;
     border: none;
+}
+.spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #a9a9e5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.5s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 9999;
+    display: none; /* initially hidden */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

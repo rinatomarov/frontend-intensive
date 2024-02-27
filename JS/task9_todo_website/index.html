@@ -9,44 +9,45 @@
 
 </head>
 <body>
-    <div class="form">
-        <div class="input-create">
-            <input type="text" class="input-name" placeholder="Название">
-            <button class="create-name">Создать</button>
-        </div>
-        <div class="task-status">
-            <input type="radio" name="status" id="active" class="form-radio">
-            <label for="active">Active</label>
-            <input type="radio" name="status" id="finished" class="form-radio">
-            <label for="finished">Finished</label>
-            <input type="radio" name="status" id="on-hold" class="form-radio">
-            <label for="on-hold">On Hold</label>
-            <input type="radio" name="status" id="canceled" class="form-radio">
-            <label for="canceled">Canceled</label>
-        </div>
+<div id="spinner" class="spinner"></div>
+<div class="form">
+    <div class="input-create">
+        <input type="text" class="input-name" placeholder="Название">
+        <button class="create-name">Создать</button>
     </div>
+    <div class="task-status">
+        <input type="radio" name="status" id="active" class="form-radio">
+        <label for="active">Active</label>
+        <input type="radio" name="status" id="finished" class="form-radio">
+        <label for="finished">Finished</label>
+        <input type="radio" name="status" id="on-hold" class="form-radio">
+        <label for="on-hold">On Hold</label>
+        <input type="radio" name="status" id="canceled" class="form-radio">
+        <label for="canceled">Canceled</label>
+    </div>
+</div>
 
-    <div class="todo-parent">
-        <div class="todo-column todo-column-active">
-            <h3>Active</h3>
-            <div class="todo-items">
-            </div>
-        </div>
-        <div class="todo-column todo-column-on-hold">
-            <h3>On Hold</h3>
-            <div class="todo-items">
-            </div>
-        </div>
-        <div class="todo-column todo-column-finished">
-            <h3>Finished</h3>
-            <div class="todo-items">
-            </div>
-        </div>
-        <div class="todo-column todo-column-canceled">
-            <h3>Canceled</h3>
-            <div class="todo-items">
-            </div>
+<div class="todo-parent">
+    <div class="todo-column todo-column-active">
+        <h3>Active</h3>
+        <div class="todo-items">
         </div>
     </div>
+    <div class="todo-column todo-column-on-hold">
+        <h3>On Hold</h3>
+        <div class="todo-items">
+        </div>
+    </div>
+    <div class="todo-column todo-column-finished">
+        <h3>Finished</h3>
+        <div class="todo-items">
+        </div>
+    </div>
+    <div class="todo-column todo-column-canceled">
+        <h3>Canceled</h3>
+        <div class="todo-items">
+        </div>
+    </div>
+</div>
 </body>
 </html>
