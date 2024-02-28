@@ -48,14 +48,17 @@ function addElements(statusTask,title,id){
     idTask++
     return idTask
 }
-
-
+const spinner = document.getElementById('spinner')
+const overlay = document.querySelector('.overlay')
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 async function getToDoS(){
-    const spinner = document.getElementById('spinner');
-    spinner.style.display = 'block';
+    // const spinner = document.getElementById('spinner')
+    spinner.style.display = 'block'
+    // const overlay = document.querySelector('.overlay')
+    overlay.style.display = 'block'
     try {
         const response = await axios.get('http://localhost:3000/todos')
-        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
         console.log(response.data)
         for (let id =0;id < response.data.length;id++){
             // console.log(response.data[id])
@@ -69,10 +72,9 @@ async function getToDoS(){
     }catch (error){
         console.log('Error:', error)
     }finally {
-        spinner.style.display = 'none';
+        spinner.style.display = 'none'
+        overlay.style.display = 'none'
     }
-
-
 }
 getToDoS()
 
@@ -86,27 +88,44 @@ buttonCreateTask.addEventListener('click', async () => {
     let radioDataOnHold = document.querySelector('#on-hold').checked
     let radioDataCanceled = document.querySelector('#canceled').checked
 
+    try {
+        async function postRequest(status,dataText){
+            const spinner = document.getElementById('spinner')
+            const overlay = document.querySelector('.overlay')
+            spinner.style.display = 'block'
+            overlay.style.display = 'block'
+            // console.log(spinner)
+            // console.log(overlay)
+            await sleep(1500)
+            await axios.post('http://localhost:3000/todos',{
+                id: `${idTask}`,
+                // idTask,
+                title:dataText,
+                status:status
+            })
 
-    async function postRequest(status,dataText){
-        await axios.post('http://localhost:3000/todos',{
-            id: `${idTask}`,
-            // idTask,
-            title:dataText,
-            status:status
-        })
-        addElements(status,dataText,idTask)
+            addElements(status,dataText,idTask)
+
+        }
+        if (radioDataActive){
+            await postRequest(status[0],dataInput)
+        }else if(radioDataFinished){
+            await postRequest(status[2],dataInput)
+        }else if(radioDataOnHold){
+            await postRequest(status[1],dataInput)
+        }else if(radioDataCanceled){
+            await postRequest(status[3],dataInput)
+        }else
+            alert("Прошу выбрать статус Задачи")
+    }catch (error){
+        console.log('Error:', error)
+    }finally {
+        spinner.style.display = 'none'
+        overlay.style.display = 'none'
     }
 
-    if (radioDataActive){
-        postRequest(status[0],dataInput)
-    }else if(radioDataFinished){
-        postRequest(status[2],dataInput)
-    }else if(radioDataOnHold){
-        postRequest(status[1],dataInput)
-    }else if(radioDataCanceled){
-        postRequest(status[3],dataInput)
-    }else
-        alert("Прошу выбрать статус Задачи")
+
+
 
     // return idTask
     // alert(dataInput)

@@ -102,6 +102,16 @@ body {
     background: white;
     border: none;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
 .spinner {
     border: 8px solid rgba(0, 0, 0, 0.1);
     border-left-color: #a9a9e5;
@@ -114,8 +124,9 @@ body {
     left: 50%;
     margin-top: -25px;
     margin-left: -25px;
-    z-index: 9999;
+    z-index: 3;
     display: none; /* initially hidden */
+
 }
 
 @keyframes spin {
