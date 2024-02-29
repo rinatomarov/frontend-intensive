@@ -45,6 +45,25 @@ function addElements(statusTask,title,id){
         todoItemCreate.remove(todoItemCreate)
     })
 
+    taskName.addEventListener('dblclick',  function() {
+        const inputElement = document.createElement('input');
+        inputElement.setAttribute('type', 'text');
+        inputElement.setAttribute('value', taskName.textContent);
+        taskName.parentNode.replaceChild(inputElement, taskName);
+        inputElement.focus();
+        inputElement.addEventListener('keypress', async function(event) {
+            if (event.key === 'Enter') {
+                taskName.textContent = inputElement.value;
+                inputElement.parentNode.replaceChild(taskName, inputElement);
+                // console.log(inputElement)
+                await axios.put(`http://localhost:3000/todos/${id}`,{
+                    id: id,
+                    title:inputElement.value,
+                    status:statusTask
+                })
+            }
+        })
+    })
     idTask++
     return idTask
 }
@@ -78,9 +97,7 @@ async function getToDoS(){
 }
 getToDoS()
 
-
 const buttonCreateTask = document.querySelector('.create-name')
-
 buttonCreateTask.addEventListener('click', async () => {
     let dataInput = document.querySelector('.input-name').value
     let radioDataActive = document.querySelector('#active').checked
@@ -103,9 +120,7 @@ buttonCreateTask.addEventListener('click', async () => {
                 title:dataText,
                 status:status
             })
-
             addElements(status,dataText,idTask)
-
         }
         if (radioDataActive){
             await postRequest(status[0],dataInput)
@@ -123,11 +138,5 @@ buttonCreateTask.addEventListener('click', async () => {
         spinner.style.display = 'none'
         overlay.style.display = 'none'
     }
-
-
-
-
-    // return idTask
-    // alert(dataInput)
 })
 
