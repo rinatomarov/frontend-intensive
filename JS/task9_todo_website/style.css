@@ -97,11 +97,19 @@ body {
     max-width: 300px;
 
 }
-
-.trash:hover {
+.trash {
+    outline: none;
+    border: none;
     background: white;
+}
+.trash img {
+    display: none;
     border: none;
 }
+.trash:hover img{
+    display: inline-block;
+}
+
 .overlay {
     position: fixed;
     top: 0;
