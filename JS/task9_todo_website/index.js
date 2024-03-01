@@ -5,6 +5,9 @@ const canceledToDo = document.querySelector('.todo-column-canceled')
 let idTask = 101
 // console.log(todoItems)
 const status =['active','hold','finished','canceled']
+const spinner = document.getElementById('spinner')
+const overlay = document.querySelector('.overlay')
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 function addElements(statusTask,title,id){
     const todoItemsActive =  activeToDo.querySelector('.todo-items')
     const todoItemsHold =  onHoldToDo.querySelector('.todo-items')
@@ -53,23 +56,31 @@ function addElements(statusTask,title,id){
         inputElement.focus();
         inputElement.addEventListener('keypress', async function(event) {
             if (event.key === 'Enter') {
-                taskName.textContent = inputElement.value;
-                inputElement.parentNode.replaceChild(taskName, inputElement);
-                // console.log(inputElement)
-                await axios.put(`http://localhost:3000/todos/${id}`,{
-                    id: id,
-                    title:inputElement.value,
-                    status:statusTask
-                })
+                spinner.style.display = 'block'
+                overlay.style.display = 'block'
+                try {
+                    taskName.textContent = inputElement.value;
+                    inputElement.parentNode.replaceChild(taskName, inputElement);
+                    // console.log(inputElement)
+                    await axios.put(`http://localhost:3000/todos/${id}`,{
+                        id: id,
+                        title:inputElement.value,
+                        status:statusTask
+                    })
+                    await sleep(500)
+                }catch (error){
+                    console.log('Error:', error)
+                }finally {
+                    spinner.style.display = 'none'
+                    overlay.style.display = 'none'
+                }
             }
         })
     })
     idTask++
     return idTask
 }
-const spinner = document.getElementById('spinner')
-const overlay = document.querySelector('.overlay')
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
 async function getToDoS(){
     // const spinner = document.getElementById('spinner')
     spinner.style.display = 'block'
