@@ -1,9 +1,24 @@
 {
   "todos": [
     {
-      "id": "106",
-      "title": "dqwdqwddqwd",
+      "id": "102",
+      "title": "dwqdqw",
+      "status": "active"
+    },
+    {
+      "id": "103",
+      "title": "wdqqwdqw",
+      "status": "finished"
+    },
+    {
+      "id": "104",
+      "title": "wdqqwdqwascascas",
       "status": "hold"
+    },
+    {
+      "id": "105",
+      "title": "wdqqwdqwascascasfewfwefwe",
+      "status": "canceled"
     }
   ]
 }
