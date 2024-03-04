@@ -17,6 +17,7 @@ function addElements(statusTask,title,id){
     // Создание элементов
     const todoItemCreate = document.createElement('div')
     todoItemCreate.classList.add('todo-item')
+    todoItemCreate.setAttribute('draggable', 'true')
     const taskName = document.createElement('span')
     taskName.innerText = title
     const buttonTrash = document.createElement('button')
@@ -67,7 +68,7 @@ function addElements(statusTask,title,id){
                         title:inputElement.value,
                         status:statusTask
                     })
-                    await sleep(500)
+                    await sleep(50)
                 }catch (error){
                     console.log('Error:', error)
                 }finally {
@@ -124,7 +125,7 @@ buttonCreateTask.addEventListener('click', async () => {
             overlay.style.display = 'block'
             // console.log(spinner)
             // console.log(overlay)
-            await sleep(1500)
+            await sleep(60)
             await axios.post('http://localhost:3000/todos',{
                 id: `${idTask}`,
                 // idTask,
@@ -151,3 +152,36 @@ buttonCreateTask.addEventListener('click', async () => {
     }
 })
 
+// const activeToDo = document.querySelector('.todo-column-active')
+// const onHoldToDo = document.querySelector('.todo-column-on-hold')
+// const finishedToDo = document.querySelector('.todo-column-finished')
+// const canceledToDo = document.querySelector('.todo-column-canceled')
+
+let draggedItem = null
+function allowDrop(event) {
+    event.preventDefault()
+}
+function drag(event) {
+    draggedItem = event.target
+}
+function drop(event) {
+    event.preventDefault()
+    if (event.target.classList.contains('todo-items')) {
+        event.target.appendChild(draggedItem)
+    }
+}
+activeToDo.addEventListener('dragover', allowDrop)
+onHoldToDo.addEventListener('dragover', allowDrop)
+finishedToDo.addEventListener('dragover', allowDrop)
+canceledToDo.addEventListener('dragover', allowDrop)
+
+activeToDo.addEventListener('drop', drop)
+onHoldToDo.addEventListener('drop', drop)
+finishedToDo.addEventListener('drop', drop)
+canceledToDo.addEventListener('drop', drop)
+
+const items = document.querySelectorAll('.todo-item')
+console.log(items)
+items.forEach(item => {
+    item.addEventListener('dragstart', drag);
+})

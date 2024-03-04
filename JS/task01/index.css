@@ -1,0 +1,26 @@
+.todo-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.todo-column {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+}
+
+.todo-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    background-color: #eee;
+}
+
+.trash {
+    float: right;
+    cursor: pointer;
+}
