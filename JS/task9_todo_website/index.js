@@ -7,6 +7,7 @@ let idTask = 101
 const status =['active','hold','finished','canceled']
 const spinner = document.getElementById('spinner')
 const overlay = document.querySelector('.overlay')
+let todos = []
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 function addElements(statusTask,title,id){
     const todoItemsActive =  activeToDo.querySelector('.todo-items')
@@ -17,6 +18,7 @@ function addElements(statusTask,title,id){
     // Создание элементов
     const todoItemCreate = document.createElement('div')
     todoItemCreate.classList.add('todo-item')
+    todoItemCreate.dataset.todoId = id
     const taskName = document.createElement('span')
     taskName.innerText = title
     const buttonTrash = document.createElement('button')
@@ -88,7 +90,7 @@ async function getToDoS(){
     overlay.style.display = 'block'
     try {
         const response = await axios.get('http://localhost:3000/todos')
-
+        todos = response
         console.log(response.data)
         for (let id =0;id < response.data.length;id++){
             // console.log(response.data[id])
@@ -97,6 +99,7 @@ async function getToDoS(){
             // console.log(statusTask, title)
             addElements(statusTask,title,response.data[id].id)
             await sleep(50)
+
             // console.log(status[0])
         }
     }catch (error){
@@ -104,6 +107,7 @@ async function getToDoS(){
     }finally {
         spinner.style.display = 'none'
         overlay.style.display = 'none'
+
     }
 }
 getToDoS()
@@ -150,3 +154,36 @@ buttonCreateTask.addEventListener('click', async () => {
         overlay.style.display = 'none'
     }
 })
+
+
+
+$( function() {
+    $( ".todo-column .todo-items" ).sortable({
+        connectWith: ".todo-column .todo-items",
+        items: ".todo-item",
+        stop: async function (event, ui) {
+            const todoId = ui.item[0].dataset.todoId;
+            const status = event.target.parentElement.dataset.status;
+            console.log(status);
+            const tasks = todos.data;
+            const taskExists = tasks.some(task => task.id === todoId && task.status === status);
+            if(taskExists) {
+                return;
+            }
+            // toggleLoader();
+            const taskToUpdate = tasks.find(todo => todo.id === todoId);
+            if (taskToUpdate) {
+                taskToUpdate.status = status;
+            } else {
+                console.error(`Task with id ${todoId} not found.`);
+            }
+            await axios.put(`http://localhost:3000/todos/${todoId}`, {
+                status:status,
+                title: ui.item[0].firstChild.innerText
+            });
+            // toggleLoader();
+        }
+    }).disableSelection();
+} );
+
+// await axios.put(`http://localhost:3000/todos/${todoId}`
