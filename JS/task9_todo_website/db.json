@@ -1,22 +1,21 @@
 {
   "todos": [
     {
-      "status": "finished",
+      "status": "canceled",
       "title": "Canceled",
       "id": "111"
     },
     {
-      "status": "hold",
+      "status": "finished",
       "title": "n Hold",
       "id": "112"
     },
     {
-      "status": "finished",
       "title": "Finished",
       "id": "113"
     },
     {
-      "status": "hold",
+      "status": "active",
       "title": "Active",
       "id": "114"
     },
@@ -31,12 +30,12 @@
       "status": "active"
     },
     {
-      "status": "finished",
+      "status": "hold",
       "title": "fbdffewf",
       "id": "107"
     },
     {
-      "status": "active",
+      "status": "hold",
       "title": "po/o",
       "id": "108"
     }
