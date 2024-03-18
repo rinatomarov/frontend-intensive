@@ -8,7 +8,9 @@
   <!--  <FirstDemo text="Press me"></FirstDemo>-->
   <!--  <FirstDemo text="Submit"></FirstDemo>-->
 
-  <AddImage></AddImage>
+<!--  <AddImage></AddImage>-->
+
+  <SliderImage></SliderImage>
 </template>
 
 <script setup>
@@ -16,6 +18,7 @@
 // import Counter from "@/components/Counter.vue";
 // import Quotations from "@/components/icons/Quotations.vue";
 import AddImage from "@/components/AddImage.vue";
+import SliderImage from "@/components/SliderImage.vue";
 </script>
 
 <style>
