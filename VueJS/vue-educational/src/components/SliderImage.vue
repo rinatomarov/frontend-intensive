@@ -23,6 +23,4 @@ const nextImage = () => {
   currentImage.value = imagesArray[counter.value]
 }
 </script>
-<style scoped>
-</style>
-<!--https://stackoverflow.com/questions/61005346/custom-image-slider-in-vue-js-->
+<style scoped> </style>
