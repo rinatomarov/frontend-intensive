@@ -19,7 +19,9 @@ button {
   border-radius: 8px;
   border: none;
   margin-top: 32px;
-  width: 200px;
+  width: 150px;
   height: 52px;
+  margin-left: 25px;
+  /*justify-content: flex-start;*/
 }
 </style>

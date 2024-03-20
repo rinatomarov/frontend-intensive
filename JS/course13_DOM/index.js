@@ -18,7 +18,6 @@ button2.addEventListener('click', function (event){
     } else {
         counter = 0
     }
-
 })
 
 
