@@ -10,7 +10,14 @@
 
 <!--  <AddImage></AddImage>-->
 
-  <SliderImage></SliderImage>
+<!--  <SliderImage></SliderImage>-->
+
+  <div>
+<!--  <AddCards nameThings="Iphone 13 Pro Max" sumThings="450000"></AddCards>-->
+<!--  <AddCards nameThings="MacBook" sumThings="1190000"></AddCards>-->
+<!--  <AddCards nameThings="Airpods" sumThings="356000"></AddCards>-->
+  <AddCards></AddCards>
+  </div>
 </template>
 
 <script setup>
@@ -19,10 +26,16 @@
 // import Quotations from "@/components/icons/Quotations.vue";
 import AddImage from "@/components/AddImage.vue";
 import SliderImage from "@/components/SliderImage.vue";
+import AddCards from "@/components/AddCards.vue";
 </script>
 
 <style>
 p {
   color: red;
+}
+div{
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
 }
 </style>

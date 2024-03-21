@@ -18,10 +18,11 @@ button {
   font-weight: bold;
   border-radius: 8px;
   border: none;
-  margin-top: 32px;
+  margin-top: 12px;
   width: 150px;
-  height: 52px;
+  //height: 52px;
   margin-left: 25px;
+  margin: auto;
   /*justify-content: flex-start;*/
 }
 </style>
