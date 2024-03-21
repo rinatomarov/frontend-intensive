@@ -10,14 +10,10 @@
 
 <!--  <AddImage></AddImage>-->
 
-  <SliderImage></SliderImage>
+<!--  <SliderImage></SliderImage>-->
 
-<!--  <div class="cardAdd">-->
-<!--&lt;!&ndash;  <AddCards nameThings="Iphone 13 Pro Max" sumThings="450000"></AddCards>&ndash;&gt;-->
-<!--&lt;!&ndash;  <AddCards nameThings="MacBook" sumThings="1190000"></AddCards>&ndash;&gt;-->
-<!--&lt;!&ndash;  <AddCards nameThings="Airpods" sumThings="356000"></AddCards>&ndash;&gt;-->
-<!--  <AddCards></AddCards>-->
-<!--  </div>-->
+  <AddCards></AddCards>
+
 </template>
 
 <script setup>
@@ -32,10 +28,5 @@ import AddCards from "@/components/AddCards.vue";
 <style>
 p {
   color: red;
-}
-.cardAdd {
-  display: flex;
-  gap: 32px;
-  justify-content: flex-start;
 }
 </style>

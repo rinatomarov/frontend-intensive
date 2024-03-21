@@ -15,8 +15,6 @@ const imagesArray = [
 let counter = ref(0)
 const changeImage = (nextOrPrevDirection) => {
   counter.value = (counter.value + nextOrPrevDirection + imagesArray.length) % imagesArray.length
-  console.log(counter.value)
-  console.log()
 }
 </script>
 <style scoped> </style>
