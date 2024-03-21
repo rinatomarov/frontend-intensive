@@ -23,12 +23,13 @@ const cardsArray = ([
 
 <style scoped>
   .card{
-    //display: flex;
+    display: flex;
     border: 1px solid;
-    //width: 200px;
+    width: 200px;
     padding: 16px;
     border-radius: 8px;
     flex-direction: column;
+    margin: 32px;
   }
   h3{
     margin: auto;

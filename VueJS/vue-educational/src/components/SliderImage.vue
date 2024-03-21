@@ -1,7 +1,7 @@
 <template>
-  <div><img :src=currentImage alt="image" width="400" height="350"></div>
-  <FirstDemo text="<" @click="prevImage"></FirstDemo>
-  <FirstDemo text=">" @click="nextImage"></FirstDemo>
+  <div><img :src=imagesArray[counter] alt="image" width="400" height="350"></div>
+  <FirstDemo text="<" @click="changeImage(-1)"></FirstDemo>
+  <FirstDemo text=">" @click="changeImage(1)"></FirstDemo>
 </template>
 <script setup>
 import FirstDemo from "@/components/FirstDemo.vue";
@@ -13,14 +13,10 @@ const imagesArray = [
   'https://content.skyscnr.com/m/30c17f9542f75237/original/GettyImages-148199249.jpg?resize=2560px:1693px'
 ]
 let counter = ref(0)
-let currentImage = ref(imagesArray[counter.value])
-const prevImage = () => {
-  counter.value = (counter.value - 1 + imagesArray.length) % imagesArray.length
-  currentImage.value = imagesArray[counter.value]
-}
-const nextImage = () => {
-  counter.value = (counter.value + 1) % imagesArray.length
-  currentImage.value = imagesArray[counter.value]
+const changeImage = (nextOrPrevDirection) => {
+  counter.value = (counter.value + nextOrPrevDirection + imagesArray.length) % imagesArray.length
+  console.log(counter.value)
+  console.log()
 }
 </script>
 <style scoped> </style>
