@@ -10,9 +10,9 @@
 
 <!--  <AddImage></AddImage>-->
 
-<!--  <SliderImage></SliderImage>-->
+  <SliderImage></SliderImage>
 
-  <AddCards></AddCards>
+<!--  <AddCards></AddCards>-->
 
 </template>
 

@@ -19,12 +19,13 @@ const cardsArray = ([
   {name: "Airpods Max", price: 345000},
   {name: "Macbook 14 Max", price: 1230000}
 ])
-
+let cardMassiv = []
+//c помо reduce
 let cardPrice = ref(0)
 
 const addPrice =(price) => {
   cardPrice.value += price;
-  console.log(addPrice)
+  console.log(cardPrice)
   return  cardPrice
 }
 
